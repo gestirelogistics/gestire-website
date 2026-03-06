@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestire Logistics Ltd</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f7fa;color:#222}
+header{background:#0f2b3a;color:white;padding:20px;display:flex;align-items:center;gap:15px}
+header img{height:50px}
+nav{margin-left:auto}
+nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold}
+section{padding:60px 20px;max-width:1100px;margin:auto}
+h1,h2{color:#0f2b3a}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:white;padding:20px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+footer{background:#0f2b3a;color:white;text-align:center;padding:25px;margin-top:40px}
+input,button{padding:10px;margin-top:8px;width:100%;max-width:400px}
+.portal{background:white;padding:25px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" alt="Gestire Logistics Logo">
+<strong>Gestire Logistics Ltd</strong>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#coverage">Coverage</a>
+<a href="#portal">Employee Portal</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section>
+<h1>Reliable Last-Mile Delivery Across Quebec & Ontario</h1>
+<p>Gestire Logistics Ltd was founded in September 2024 and began operations in December 2024 as a delivery partner in Saint-Jérôme, Quebec.</p>
+</section>
+
+<section id="services">
+<h2>Services</h2>
+<div class="cards">
+<div class="card"><h3>Last-Mile Delivery</h3><p>Reliable parcel delivery from distribution hubs to customers.</p></div>
+<div class="card"><h3>Fleet Operations</h3><p>Vehicle management and route optimization.</p></div>
+<div class="card"><h3>Peak Season Support</h3><p>Flexible delivery capacity for high-volume periods.</p></div>
+<div class="card"><h3>Driver Network</h3><p>28 professional drivers supporting operations.</p></div>
+</div>
+</section>
+
+<section id="coverage">
+<h2>Coverage</h2>
+<ul>
+<li>Saint-Jérôme, Quebec</li>
+<li>Val-d'Or, Quebec</li>
+<li>Cornwall, Ontario</li>
+<li>Pembroke, Ontario</li>
+</ul>
+</section>
+
+<section id="portal">
+<h2>Employee Portal</h2>
+
+<div class="portal">
+
+<h3>Login</h3>
+<input id="emp" placeholder="Employee ID">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+
+<div id="dashboard" style="display:none">
+
+<h3>Your Paystubs</h3>
+<ul>
+<li>Feb 1-15 2026 — Net $2085</li>
+<li>Jan 16-31 2026 — Net $2028</li>
+<li>Jan 1-15 2026 — Net $1880</li>
+</ul>
+
+<h3>Pay Calculator</h3>
+<input id="base" placeholder="Base Pay">
+<input id="rent" placeholder="Van Rent">
+<input id="fuel" placeholder="Fuel Advance">
+<button onclick="calc()">Calculate</button>
+
+<p id="result"></p>
+
+</div>
+</div>
+
+<script>
+function login(){
+document.getElementById("dashboard").style.display="block"
+}
+
+function calc(){
+let base=parseFloat(document.getElementById("base").value)||0
+let rent=parseFloat(document.getElementById("rent").value)||0
+let fuel=parseFloat(document.getElementById("fuel").value)||0
+let fee=base*0.15
+let net=base-fee-rent-fuel
+document.getElementById("result").innerHTML="Estimated Net Pay: $"+net.toFixed(2)
+}
+</script>
+
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p>Email:</p>
+<ul>
+<li>sibixavier@gestirelogistics.ca</li>
+<li>albertjose@gestirelogistics.ca</li>
+</ul>
+<p>Serving Quebec and Ontario, Canada</p>
+</section>
+
+<footer>
+© 2026 Gestire Logistics Ltd
+</footer>
+
+</body>
+</html>
