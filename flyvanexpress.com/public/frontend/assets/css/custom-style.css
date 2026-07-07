@@ -1,0 +1,32 @@
+.kv-file-upload,
+.ileinput-upload-button,
+.fileinput-remove-button {
+    display: none !important;
+}
+
+.datepicker {
+    padding: 22px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    direction: ltr;
+}
+
+.datepicker td,
+.datepicker th {
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: none;
+    padding: 7px;
+}
+
+@media screen and (max-width: 600px) {
+    .ms-nav-next,
+    .ms-nav-prev {
+        opacity: 0 !important;
+    }
+}
